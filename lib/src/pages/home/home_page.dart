@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:light_speed/src/widget/photon_painter.dart';
+import 'package:light_speed/src/widget/photon_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -12,8 +12,8 @@ class HomePage extends StatelessWidget {
         color: Colors.blue,
         width: double.maxFinite,
         height: 200,
-        child: CustomPaint(
-          painter: PhotonPainter(0.9),
+        child: PhotonWidget(
+          millis: 4000,
         ),
       ),
     );
