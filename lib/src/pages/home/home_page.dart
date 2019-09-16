@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:light_speed/src/utils/items.dart';
+import 'package:light_speed/src/widget/description_item.dart';
 import 'package:light_speed/src/widget/home_list_item.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,9 +12,13 @@ class HomePage extends StatelessWidget {
         ),
         body: Container(
           child: ListView.builder(
-              itemCount: lightItems.length,
+              itemCount: lightItems.length + 1,
               itemBuilder: (context, index) {
-                var item = lightItems[index];
+                if (index == 0) {
+                  return DescriptionItem();
+                }
+                var itemIndex = index - 1;
+                var item = lightItems[itemIndex];
                 return HomeListItem(lightItem: item);
               }),
         ));
