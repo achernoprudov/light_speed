@@ -1,10 +1,10 @@
 class LightItem {
   final String leadingTitle;
-  final String leadingImageUrl;
+  final String leadingImage;
   final String trailingTitle;
-  final String trailingImageUrl;
+  final String trailingImage;
   final int durationMills;
 
-  LightItem(this.leadingTitle, this.leadingImageUrl, this.trailingTitle,
-      this.trailingImageUrl, this.durationMills);
+  LightItem(this.leadingTitle, this.leadingImage, this.trailingTitle,
+      this.trailingImage, this.durationMills);
 }
