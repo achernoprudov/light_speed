@@ -32,6 +32,8 @@ class _PhotonWidgetState extends State<PhotonWidget>
       }
     });
     controller.forward();
+
+    animation = tween.animate(controller);
   }
 
   @override
@@ -39,8 +41,10 @@ class _PhotonWidgetState extends State<PhotonWidget>
     return AnimatedBuilder(
       animation: tween.animate(controller),
       builder: (context, _) {
-        return CustomPaint(
-          painter: PhotonPainter(animation.value),
+        return Expanded(
+          child: CustomPaint(
+            painter: PhotonPainter(animation.value),
+          ),
         );
       },
     );

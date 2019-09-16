@@ -15,6 +15,7 @@ class PhotonPainter extends CustomPainter {
       ..isAntiAlias = true;
 
     var center = Offset(x, y);
+
     canvas.drawCircle(center, 5, paint);
 
     canvas.save();
